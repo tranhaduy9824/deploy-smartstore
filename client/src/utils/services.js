@@ -25,7 +25,7 @@ export const getRequest = async (url, query = {}, token = null) => {
         config.headers.Authorization = `Bearer ${token}`;
     }
 
-    const response = await axios.get(url, config);
+    const response = await axios.get(`${url}/api/`, config);
 
     const data = await response.data;
 
