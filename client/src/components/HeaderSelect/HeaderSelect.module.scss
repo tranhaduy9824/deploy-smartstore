@@ -1,0 +1,34 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    > div {
+        flex-grow: 1;
+        text-align: center;
+        padding: 10px 0;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        font-size: 1.7rem;
+        font-weight: 500;
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 5px;
+            background-color: var(--primary);
+            transition: width 0.3s linear;
+            border-radius: var(--border-radius);
+        }
+
+        &.selected:before,
+        &:hover:before {
+            width: 100%;
+        }
+    }
+}

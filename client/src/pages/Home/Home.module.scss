@@ -1,0 +1,300 @@
+.wrapper {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.box-slide {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    padding: 40px var(--horizontal-spacing-content);
+
+    .background-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -9;
+        opacity: 0.5;
+    }
+
+    .list-slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        overflow-x: hidden;
+        border-radius: var(--border-radius);
+    }
+
+    .slide-item:first-child {
+        background-color: #d5dee5;
+    }
+
+    .slide-item:nth-child(2) {
+        background-color: #ffdfa0;
+    }
+
+    .slide-item:nth-child(3) {
+        background-color: rgb(160, 183, 227);
+    }
+
+    .slide-item:nth-child(4) {
+        background-color: rgb(156, 247, 214);
+    }
+
+    .slide-item {
+        min-width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        border-radius: var(--border-radius);
+        transition: transform 0.5s linear;
+
+        .content {
+            width: 50%;
+            margin-right: 20px;
+            color: var(--black);
+        }
+
+        .heading {
+            font-size: 3rem;
+            line-height: 1.33333;
+            margin-bottom: 11px;
+            font-weight: 500;
+        }
+
+        .name {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .price {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+
+            span {
+                color: var(--primary);
+                margin-right: 10px;
+            }
+        }
+
+        .btn-buy {
+            width: 150px;
+            cursor: pointer;
+
+            &:hover > a {
+                background-color: var(--primary);
+                color: var(--white);
+            }
+
+            > a {
+                background-color: transparent;
+                color: var(--primary);
+                border: 1px solid var(--primary);
+                transition: background-color 0.5s, color 0.5s;
+            }
+        }
+
+        .image {
+            width: 50%;
+            height: 100%;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: var(--border-radius);
+                pointer-events: none;
+            }
+        }
+    }
+
+    .controls {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-between;
+        width: 88%;
+        padding: 0 20px;
+
+        button {
+            background-color: var(--background-sub);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.box-categories {
+    width: 100%;
+    padding: 40px var(--horizontal-spacing-content);
+
+    .item-category {
+        width: 110px;
+        padding: 0 20px;
+        transition: transform 0.5s linear;
+        color: var(--black);
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 2px 2px 2px 2px #00000029;
+        }
+
+        img {
+            width: 70px;
+            height: 70px;
+        }
+
+        p {
+            width: 70px;
+            overflow-x: hidden;
+        }
+    }
+}
+
+.box-news,
+.box-recommend {
+    width: 100%;
+    padding: 0 var(--horizontal-spacing-content);
+
+    .news,
+    .recommend {
+        padding: 30px;
+        border: 1px solid var(--border-color);
+    }
+
+    .list-news,
+    .list-recommend {
+        gap: 0;
+        align-items: flex-start;
+        overflow-x: clip;
+        position: relative;
+    }
+}
+
+.box-news {
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 46.1875em) {
+    .box-slide {
+        height: max-content;
+        padding: 40px var(--horizontal-spacing-mobile);
+
+        .slide-item {
+            min-width: 100%;
+            height: max-content;
+            min-height: 300px;
+            padding: 30px;
+            align-items: flex-start;
+
+            .heading {
+                font-size: 1.8rem;
+            }
+
+            .name {
+                font-size: 1.5rem;
+            }
+
+            .image {
+                height: auto;
+                aspect-ratio: 1 / 1;
+            }
+
+            .price {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                font-weight: 500;
+
+                span {
+                    color: var(--primary);
+                    margin-right: 10px;
+                }
+            }
+
+            .btn-buy {
+                width: 100px;
+                height: 35px;
+
+                & > a {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        .controls {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    .box-categories {
+        padding: 40px var(--horizontal-spacing-mobile);
+    }
+
+    .box-recommend,
+    .box-news {
+        padding: 0 var(--horizontal-spacing-mobile);
+
+        .news,
+        .recommend {
+            padding: 20px 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .box-slide {
+        height: max-content;
+        padding: 40px var(--horizontal-spacing-mobile);
+
+        .slide-item {
+            min-width: 85%;
+            height: max-content;
+            min-height: 300px;
+            align-items: flex-start;
+
+            .image {
+                height: auto;
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+        .controls {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    .box-categories {
+        padding: 40px var(--horizontal-spacing-mobile);
+    }
+
+    .box-recommend,
+    .box-news {
+        padding: 0 var(--horizontal-spacing-mobile);
+
+        .news,
+        .recommend {
+            padding: 20px 10px;
+        }
+    }
+}

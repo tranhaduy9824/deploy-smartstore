@@ -1,0 +1,89 @@
+.wrapper {
+    .header {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: var(--black);
+    }
+
+    .input {
+        height: 40px;
+        border-bottom: 1px solid var(--border-color);
+
+        input {
+            font-size: 1.4rem;
+        }
+    }
+
+    .fullname-phone {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        color: var(--black);
+        margin-bottom: 5px;
+    }
+
+    .address {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        select {
+            flex-grow: 1;
+            width: calc(100% / 3);
+            height: 30px;
+            font-size: 1.4rem;
+        }
+    }
+
+    .set-default {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+
+        input {
+            width: 20px;
+            height: 20px;
+            margin-right: 7px;
+        }
+    }
+
+    .btn-comeback {
+        width: max-content;
+        height: max-content;
+        margin-top: 10px;
+        padding: 5px 10px;
+        border: 1px solid var(--primary);
+        background-color: var(--background);
+        border-radius: var(--border-radius);
+
+        button {
+            width: max-content;
+            padding-left: 5px;
+            background-color: transparent;
+            color: var(--black);
+        }
+    }
+
+    button {
+        width: 150px;
+        float: right;
+        font-size: 1.6rem;
+        font-weight: 500;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+.google-map {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+}

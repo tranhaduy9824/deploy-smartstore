@@ -1,0 +1,80 @@
+.wrapper {
+    .title {
+        font-size: 2rem;
+        line-height: 28px;
+        font-weight: 500;
+        color: var(--black);
+    }
+
+    > div > p {
+        margin-top: 6px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--second-text);
+    }
+
+    .need-do {
+        padding: 20px;
+        background-color: var(--white);
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+
+        .list {
+            max-height: 154px;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            position: relative;
+            width: 25%;
+            padding: 8px 0;
+            margin-bottom: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+
+            > p:first-child {
+                margin-bottom: 7px;
+                font-size: 1.6rem;
+                min-height: 18px;
+                color: #2673dd;
+                font-weight: 700;
+            }
+
+            > p:last-child {
+                font-size: 1.4rem;
+                max-height: 42px;
+                overflow: hidden;
+                padding: 0 12px;
+                display: flex;
+                justify-content: center;
+                position: relative;
+            }
+
+            &:nth-child(4),
+            &:nth-child(7) {
+                &:after {
+                    width: 0;
+                }
+            }
+
+            &::after {
+                content: '';
+                width: 1px;
+                height: calc(100% - 16px);
+                background-color: var(--border-color);
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+
+    .revenue-analysis {
+        margin-top: 10px;
+        padding: 20px;
+        background-color: var(--white);
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+    }
+}

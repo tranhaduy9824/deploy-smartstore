@@ -1,0 +1,141 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 30px;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+    & > div {
+        flex-grow: 1;
+
+        &:nth-child(2),
+        &:last-child {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            & > div {
+                display: flex;
+                align-items: center;
+                padding: 10px 0;
+            }
+        }
+
+        &:last-child > div:first-child span,
+        &:nth-child(2) span {
+            color: var(--primary);
+            font-weight: 500;
+            margin-left: 5px;
+        }
+
+        &:last-child {
+            justify-content: flex-start;
+        }
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        border: 5px solid hsla(0, 0%, 0%, 0.4);
+    }
+
+    .avatar-name {
+        display: flex;
+
+        .name {
+            margin-left: 10px;
+            flex-grow: 1;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: max-content;
+                padding: 5px 10px;
+                border-radius: var(--border-radius);
+                color: var(--white);
+                background-color: var(--primary);
+                font-size: 1.4rem;
+            }
+        }
+
+        h1 {
+            font-weight: 500;
+        }
+    }
+
+    .control {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+
+    .chat {
+        width: 110px;
+        height: max-content;
+        padding: 3px 0;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--primary);
+        background-color: var(--background);
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        button {
+            width: 60px;
+            background-color: transparent;
+            color: var(--black);
+        }
+    }
+
+    .social a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+
+        svg {
+            margin-right: 0;
+            font-size: 1.8rem;
+            width: 1.8rem;
+            color: white;
+        }
+    }
+
+    .fb {
+        background-color: rgb(43, 0, 255);
+    }
+
+    .ins {
+        background-color: rgb(240, 43, 171);
+    }
+
+    .twitter {
+        background-color: #2478ba;
+    }
+
+    .tik {
+        background-color: #2a182a;
+    }
+
+    svg {
+        width: 1.8rem;
+        font-size: 1.8rem;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 46.1875em) {
+    .wrapper {
+        flex-wrap: wrap;
+    }
+}

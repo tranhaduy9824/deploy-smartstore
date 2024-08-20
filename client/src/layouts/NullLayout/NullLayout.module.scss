@@ -1,0 +1,54 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.circle1,
+.circle2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    z-index: -99;
+}
+
+.circle1 {
+    bottom: -100px;
+    left: -100px;
+    background-image: linear-gradient(to top right, var(--primary), white);
+}
+
+.circle2 {
+    top: -100px;
+    right: -100px;
+    background-image: linear-gradient(to bottom left, var(--primary), white);
+}
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+
+    img {
+        width: 70px;
+        cursor: pointer;
+    }
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 46.1875em) {
+    .logo {
+        top: 30px;
+        left: 20px;
+    }
+}

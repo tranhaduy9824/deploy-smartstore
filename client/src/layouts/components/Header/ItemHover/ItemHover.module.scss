@@ -1,0 +1,68 @@
+.wrapper-hover:hover {
+    width: auto;
+
+    .right-icon {
+        transform: rotate(180deg);
+    }
+
+    > li > div,
+    > li .right-icon,
+    > li a {
+        color: var(--primary);
+    }
+}
+
+.wrapper-item-hover {
+    display: none;
+    width: max-content;
+
+    &:hover {
+        display: block;
+    }
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    cursor: pointer;
+
+    &:last-child > div,
+    &:last-child a {
+        border: none;
+    }
+
+    &:hover > div,
+    &:hover .right-icon,
+    &:hover a {
+        color: var(--primary);
+    }
+
+    &:hover .right-icon {
+        transform: rotate(180deg);
+    }
+
+    &:hover + div > .wrapper-item-hover {
+        display: block;
+        animation: var(--show-item) 0.2s linear;
+    }
+
+    > div,
+    a {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        padding: 9px 0;
+        transition: color 0.3s ease-in-out;
+        
+        &.active {
+            color: var(--black) !important;
+        }
+    }
+}
+
+.right-icon {
+    font-size: 1.2rem;
+    transform: rotate(0);
+    transition: transform 0.3s ease-in-out;
+}

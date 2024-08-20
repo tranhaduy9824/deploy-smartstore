@@ -1,0 +1,151 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #6951ae;
+    --black: #000;
+    --white: #ffffff;
+    --border-radius: 20px;
+    --background: #f3f3f3;
+    --background-sub: #aad4c8;
+    --color-times: #ff5b64;
+    --second-text: #5e5e5e;
+    --border-color: #c5c5c5;
+    --horizontal-spacing: 30px;
+    --horizontal-spacing-mobile: 15px;
+    --horizontal-spacing-content: 165px;
+
+    --slide-in-from-left: slideInFromLeft;
+    --slide-in-from-right: slideInFromRight;
+    --slide-out-to-right: slideOutToRight;
+    --slide-out-to-left: slideOutToLeft;
+    --show-item: showItem;
+    --hidden-item: hiddenItem;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes showItem {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes hiddenItem {
+    from {
+        opacity: 1;
+        scale: 1;
+    }
+    to {
+        opacity: 0;
+        scale: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--black);
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}

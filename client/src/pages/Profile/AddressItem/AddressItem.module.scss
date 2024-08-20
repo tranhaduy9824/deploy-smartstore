@@ -1,0 +1,70 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 20px;
+    border-bottom: 1px solid var(--primary);
+
+    .info-user {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .name {
+            font-size: 1.7rem;
+            font-weight: 500;
+            margin-right: 5px;
+        }
+
+        .phone-number {
+            color: var(--second-text);
+        }
+    }
+
+    .info-address {
+        color: var(--second-text);
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    .default-address {
+        width: max-content;
+        border-radius: var(--border-radius);
+        padding: 5px 15px;
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        font-size: 1.4rem;
+    }
+
+    .action-text {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        font-size: 1.4rem;
+        cursor: pointer;
+
+        > div {
+            color: #08f;
+        }
+    }
+
+    .change-default {
+        margin-top: 10px;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-color);
+        padding: 5px 15px;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 46.1875em) {
+    .wrapper {
+        flex-wrap: wrap;
+
+        .box-right {
+            margin-left: auto;
+        }
+    }
+}

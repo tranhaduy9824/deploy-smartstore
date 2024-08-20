@@ -1,0 +1,20 @@
+.wrapper {
+    position: relative;
+    width: 18px;
+}
+
+.count {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    display: block;
+    text-align: center;
+    background-color: var(--primary);
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    padding: 5px 5px 3px;
+    line-height: 1;
+    min-width: 18px;
+}

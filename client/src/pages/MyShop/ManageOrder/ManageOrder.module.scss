@@ -1,0 +1,104 @@
+.wrapper {
+    height: 100%;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+
+    .title {
+        font-size: 2rem;
+        line-height: 28px;
+        font-weight: 500;
+        color: var(--black);
+    }
+
+    .search-order {
+        width: 250px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+
+        .search {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 180px;
+            height: 35px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 0px 15px;
+            color: var(--second-text);
+            cursor: pointer;
+        }
+
+        .wrapper-list-search {
+            border-top: 0;
+        }
+
+        .list-search {
+            width: 180px;
+            padding: 10px 0;
+            border-radius: var(--border-radius);
+
+            li {
+                padding: 0px 15px;
+
+                &:hover a {
+                    color: var(--black);
+                }
+
+                a {
+                    color: var(--second-text);
+                    padding: 5px 0;
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        svg {
+            width: 1.3rem;
+        }
+
+        input {
+            width: 250px;
+            margin-left: 10px;
+            height: 35px;
+            padding: 12px 20px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 1.4rem;
+            transition: border-color 0.3s ease-in-out;
+
+            &:focus {
+                border-color: var(--primary);
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+        }
+    }
+
+    .order {
+        margin-top: 20px;
+
+        > div:last-child {
+            border-bottom: none;
+        }
+
+        .not-found {
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            svg {
+                width: 100px;
+            }
+
+            span {
+                margin-top: 10px;
+                color: var(--second-text);
+                opacity: 0.6;
+            }
+        }
+    }
+}

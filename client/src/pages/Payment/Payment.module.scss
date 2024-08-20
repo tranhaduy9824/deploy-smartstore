@@ -1,0 +1,278 @@
+.wrapper {
+    width: 100%;
+    padding: 20px var(--horizontal-spacing-content) 40px var(--horizontal-spacing-content);
+
+    .title {
+        font-weight: 500;
+        font-size: 2rem;
+        color: var(--primary);
+        padding-bottom: 20px;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.info-payment {
+    flex-grow: 1;
+    padding-top: 20px;
+
+    svg {
+        fill: currentColor;
+        color: var(--primary);
+        margin-right: 7px;
+    }
+
+    .address-user {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        span {
+            font-weight: 700;
+            margin-right: 15px;
+            line-height: 1.8;
+        }
+
+        p {
+            margin-right: 15px;
+            line-height: 1.8;
+        }
+
+        div {
+            font-size: 1.2rem;
+            padding: 3px 6px;
+            margin-right: 25px;
+            border: 1px solid var(--primary);
+            background-color: var(--background);
+        }
+
+        .change {
+            color: #4080ee;
+            cursor: pointer;
+        }
+    }
+
+    .payment {
+        .list-type {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            > div {
+                padding: 5px 10px;
+                border: 1px solid transparent;
+
+                &.active,
+                &:hover {
+                    cursor: pointer;
+                    background-color: var(--background);
+                    border: 1px solid var(--primary);
+                }
+            }
+        }
+
+        > p {
+            margin-top: 10px;
+        }
+    }
+}
+
+.bill {
+    width: 35%;
+    padding: 20px;
+    border: 3px solid var(--primary);
+
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--border-color);
+        padding: 5px 0;
+
+        span {
+            font-weight: 500;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .list-product {
+        flex-direction: column;
+
+        > div {
+            width: 100%;
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            color: var(--second-text);
+
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .money {
+        color: var(--primary);
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.navigate {
+    display: flex;
+
+    .btn-navigate {
+        width: max-content;
+        padding: 0px 20px;
+        margin-right: 20px;
+        background-color: var(--background);
+        border: 1px solid var(--border-color);
+
+        a {
+            margin-left: 10px;
+            background-color: transparent;
+            color: black;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+    }
+}
+
+.btn-buy {
+    width: max-content;
+
+    &:hover {
+        background-color: var(--background);
+        border: 1px solid var(--primary);
+
+        button {
+            background-color: transparent;
+            color: var(--primary);
+        }
+    }
+
+    button {
+        padding: 0px 20px;
+        border-radius: 0;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+}
+
+.model-change-address {
+    height: max-content;
+    max-height: 650px;
+    padding: 20px 0;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.54);
+
+    .title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        padding: 0px 20px;
+    }
+
+    .list-address {
+        height: 450px;
+        overflow-y: auto;
+        padding: 0px 20px;
+
+        > div:last-child > div {
+            border-bottom: none;
+        }
+    }
+
+    .adddress-item {
+        width: 100%;
+        display: flex;
+
+        .radio-input {
+            padding-top: 20px;
+            border-bottom: 1px solid var(--primary);
+
+            input {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+
+        > div:last-child {
+            flex-grow: 1;
+            padding-left: 10px;
+        }
+    }
+
+    .controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 0 20px;
+
+        > div {
+            width: max-content;
+            padding: 5px 15px;
+            margin-top: 10px;
+            border-radius: var(--border-radius);
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.9;
+            }
+        }
+    }
+
+    .add-address {
+        background-color: var(--background);
+        border: 1px solid var(--primary);
+    }
+}
+
+.model-add-address {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.54);
+    padding: 30px;
+    width: 500px;
+}
+
+@media screen and (max-width: 46.1875em) {
+    .wrapper {
+        padding: 20px var(--horizontal-spacing-mobile) 40px var(--horizontal-spacing-mobile);
+    }
+
+    .model-change-address,
+    .model-add-address {
+        width: 400px;
+    }
+
+    .controls,
+    .content {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .bill {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .wrapper {
+        padding: 20px var(--horizontal-spacing-mobile) 40px var(--horizontal-spacing-mobile);
+    }
+}

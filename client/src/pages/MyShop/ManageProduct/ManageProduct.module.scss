@@ -1,0 +1,101 @@
+.wrapper {
+    height: 100%;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+
+    .box-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .add-product {
+        padding: 5px 10px;
+        border: 1px solid var(--primary);
+        background-color: var(--background);
+        cursor: pointer;
+    }
+
+    .title {
+        font-size: 2rem;
+        line-height: 28px;
+        font-weight: 500;
+        color: var(--black);
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            font-size: 1.8rem;
+        }
+    }
+
+    input[type='text'] {
+        width: 300px;
+        margin-top: 20px;
+        height: 40px;
+        padding: 12px 20px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        font-size: 1.6rem;
+        transition: border-color 0.3s ease-in-out;
+
+        &:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+    }
+
+    .list-product {
+        margin-top: 30px;
+
+        .product-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .name {
+                width: 60%;
+                margin: 0 10px;
+            }
+
+            .price {
+                width: 15%;
+                flex-grow: 1;
+                padding-left: 10px;
+                font-weight: 500;
+            }
+
+            .controls {
+                display: flex;
+                justify-content: flex-end;
+                gap: 20px;
+
+                svg {
+                    width: 2.2rem;
+                    height: 2.2rem;
+                    font-size: 2.2rem;
+                    cursor: pointer;
+                }
+
+                > span:first-child svg {
+                    color: var(--primary);
+                }
+
+                > span:last-child svg {
+                    fill: currentColor;
+                    color: red;
+                }
+            }
+        }
+    }
+}

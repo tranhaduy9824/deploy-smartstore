@@ -1,0 +1,53 @@
+.wrapper {
+    width: 300px;
+    padding: 20px;
+    background-color: var(--background-sub);
+    border-radius: var(--border-radius);
+    color: var(--black);
+
+    .title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .message {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+        gap: 10px;  
+      
+        .btn {
+          padding: 5px 15px;
+          border: none;
+          border-radius: var(--border-radius);
+          font-size: 1.4rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.3s ease;
+      
+          &.confirm {
+            background-color: #4CAF50;
+            color: var(--white);
+      
+            &:hover {
+              background-color: #3e8e41;
+            }
+          }
+      
+          &.cancel {
+            background-color: var(--background);
+            color: var(--black);
+      
+            &:hover {
+              background-color: #e6e6e6;
+            }
+          }
+        }
+      }
+}
