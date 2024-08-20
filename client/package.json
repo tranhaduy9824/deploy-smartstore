@@ -28,6 +28,7 @@
         "react-use-gesture": "^9.1.3",
         "reactjs-social-login": "^2.6.3",
         "redux": "^5.0.1",
+        "smart-store": "file:..",
         "web-vitals": "^2.1.4"
     },
     "scripts": {

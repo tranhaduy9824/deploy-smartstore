@@ -56,10 +56,10 @@ app.use("/api/shop", shopRoutes);
 app.use("/api/payment", paymentRoutes);
 
 const currentDirectory = path.resolve();
-app.use(express.static(path.join(currentDirectory, '/client/dist')));
+app.use(express.static(path.join(currentDirectory, '/client/build')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(currentDirectory, 'client', 'dist', 'index.html'));
+  res.sendFile(path.join(currentDirectory, 'client', 'build', 'index.html'));
 });
 
 app.get('/', (req, res) => {
