@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+export const baseUrl = 'https://deploy-smartstore.onrender.com/';
+
 export const postRequest = async (url, body, token = null, formData = false) => {
     const config = {
         headers: {
@@ -8,7 +10,7 @@ export const postRequest = async (url, body, token = null, formData = false) => 
         },
     };
 
-    const response = await axios.post(`api${url}/`, formData ? body : JSON.stringify(body), config);
+    const response = await axios.post(`${baseUrl}api${url}/`, formData ? body : JSON.stringify(body), config);
 
     const data = await response.data;
 
@@ -25,7 +27,7 @@ export const getRequest = async (url, query = {}, token = null) => {
         config.headers.Authorization = `Bearer ${token}`;
     }
 
-    const response = await axios.get(`api${url}/`, config);
+    const response = await axios.get(`${baseUrl}api${url}/`, config);
 
     const data = await response.data;
 
@@ -40,7 +42,7 @@ export const deleteRequest = async (url, body, token = null) => {
         data: body,
     };
 
-    const response = await axios.delete(`api${url}/`, config);
+    const response = await axios.delete(`${baseUrl}api${url}/`, config);
 
     const data = await response.data;
 
@@ -55,7 +57,7 @@ export const patchRequest = async (url, body, token = null, formData = false) =>
         },
     };
 
-    const response = await axios.patch(`api${url}/`, formData ? body : JSON.stringify(body), config);
+    const response = await axios.patch(`${baseUrl}api${url}/`, formData ? body : JSON.stringify(body), config);
 
     const data = await response.data;
 
