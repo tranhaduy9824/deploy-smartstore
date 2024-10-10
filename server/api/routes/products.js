@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const multer = require("multer");
+const fs = require("fs");
+
 const path = require("path");
 const shortid = require("shortid");
 
@@ -8,9 +10,14 @@ const ProductsController = require("../controllers/products");
 const checkAuth = require("../middleware/check-auth");
 const isShop = require("../middleware/is-shop");
 
+const uploadsDir = path.join(__dirname, "../../uploads");
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+}
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/");
+    cb(null, uploadsDir);
   },
   filename: (req, file, cb) => {
     cb(
@@ -73,7 +80,12 @@ router.get(
   },
   ProductsController.products_get_recommend
 );
-router.get("/my-shop", checkAuth, isShop, ProductsController.products_get_my_shop);
+router.get(
+  "/my-shop",
+  checkAuth,
+  isShop,
+  ProductsController.products_get_my_shop
+);
 router.get("/:id", ProductsController.products_get_one);
 router.get("/shop/:shopId", ProductsController.products_get_by_shop);
 router.delete(
