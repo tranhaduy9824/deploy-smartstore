@@ -26,8 +26,10 @@ mongoose.connect(
 );
 mongoose.Promise = global.Promise;
 
+const uploadsDir = path.join(__dirname, "uploads");
+
 app.use(morgan("dev"));
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static(uploadsDir));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
